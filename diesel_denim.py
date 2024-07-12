@@ -1,3 +1,5 @@
+# Description: This script scrapes the Diesel website for denim products and prints the name and price of each product.
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -21,11 +23,11 @@ time.sleep(3)
 containers = driver.find_elements(By.CSS_SELECTOR, '.container-price-name-carousel')
 for container in containers:
     try:
-        # Trova il nome del prodotto
+        # Find the name of the product
         name_element = container.find_element(By.CSS_SELECTOR, '.product-tile-body__link')
         name = name_element.text
         
-        # Trova il prezzo del prodotto
+        # Find the price of the product
         price_element = container.find_element(By.CSS_SELECTOR, '.product-tile-body__price .value')
         price = price_element.text
         
