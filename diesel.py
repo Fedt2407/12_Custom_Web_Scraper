@@ -1,4 +1,4 @@
-# Description: This script scrapes the Diesel website for denim products and prints the name and price of each product.
+# Description: This script scrapes the Diesel website for denim products and generates a csv file with name and price.
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
